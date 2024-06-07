@@ -61,6 +61,38 @@
         ]
     });
 
+
+  // Gallery Carousel
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 4
+      }
+    }
+  })
+
+  // Init AOS
+  function aos_init() {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
+  $(window).on('load', function () {
+    aos_init();
+    $('.venobox').venobox();
+  });
+
     
 })(jQuery);
 
